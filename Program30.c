@@ -4,17 +4,16 @@
 
 int main()
 {
-	int num;
-	printf("Enter a Number %d",num);
-	scanf("%d",&num);
-	
-	int sum,n;
-	while(num>0)
-	{
-		n=num%10;
-		sum=(sum*10)+n;
-		num=num/10;
-	}
-	printf("%d",sum);
-	return 0;	
+    int num, sum = 0, n;
+    printf("Enter a Number: ");
+    scanf("%d", &num);
+
+    while (num > 0)
+    {
+        n = num % 10;
+        sum = (sum * 10) + n;
+        num = num / 10;
+    }
+    printf("%d\n", sum);
+    return 0;
 }

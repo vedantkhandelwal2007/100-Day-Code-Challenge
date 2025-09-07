@@ -3,35 +3,50 @@
 #include <stdio.h>
 
 int main() {
-	float cost_price,selling_price,profit_or_loss;
-	
-	printf("Enter Cost price: ");
-	scanf("%f",&cost_price);
-	
-	printf("Enter Selling price: ");
-	scanf("%f",&selling_price);
+    int month;
+    printf("Enter a number (1-12): ");
+    scanf("%d", &month);
 
-	if(cost_price>selling_price)
-	{
-		profit_or_loss=((cost_price-selling_price)/cost_price)*100;
-		printf("Loss percentage is: %0.2f",profit_or_loss);
-			
-	}	
-	else if(cost_price<selling_price)
-	{
-	
-		profit_or_loss=((selling_price-cost_price)/cost_price)*100;
-		printf("Profit percentage is: %0.2f",profit_or_loss);
-	}
-	
-	else if(cost_price==selling_price)
-	{
-		
-	}
-	else
-	{
-		printf("Invalid Input");
-	}
-	
-	return 0;
+    switch(month) {
+        case 1:
+            printf("January, 31 Days\n");
+            break;
+        case 2:
+            printf("February, 28 Days\n");
+            break;
+        case 3:
+            printf("March, 31 Days\n");
+            break;
+        case 4:
+            printf("April, 30 Days\n");
+            break;
+        case 5:
+            printf("May, 31 Days\n");
+            break;
+        case 6:
+            printf("June, 30 Days\n");
+            break;
+        case 7:
+            printf("July, 31 Days\n");
+            break;
+        case 8:
+            printf("August, 31 Days\n");
+            break;
+        case 9:
+            printf("September, 30 Days\n");
+            break;
+        case 10:
+            printf("October, 31 Days\n");
+            break;
+        case 11:
+            printf("November, 30 Days\n");
+            break;
+        case 12:
+            printf("December, 31 Days\n");
+            break;
+        default:
+            printf("Invalid input! Please enter a number between 1 and 12.\n");
+    }
+
+    return 0;
 }

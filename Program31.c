@@ -3,24 +3,25 @@
 #include <stdio.h>
 
 int main() {
-    int num, temp, divisor;
+    int num, binary, i = 0;
+
+    printf("Enter a number: ");
     scanf("%d", &num);
 
-    divisor = 1;
-    temp = num;
-    while (divisor <= temp)
-        divisor = divisor * 2;
-    divisor = divisor / 2;
-
-    while (divisor > 0) {
-        if (num >= divisor) {
-            printf("1");
-            num = num - divisor;
-        } else {
-            printf("0");
-        }
-        divisor = divisor / 2;
+    if (num == 0) {
+        printf("0\n");
+        return 0;
     }
+    while (num > 0) {
+        binary = num % 2;
+        num = num / 2;
+        i++;
+    }
+    for (i = i - 1; i >= 0; i--) {
+        printf("%d", binary);
+    }
+
     printf("\n");
     return 0;
 }
+

@@ -1,36 +1,34 @@
-// Q19: Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
+// Q18: Write a program that accepts a percentage (0-100) and assigns a grade based on the following criteria: 
+/*
+   90-100: Grade A 
+   80-89: Grade B 
+   70-79: Grade C 
+   60-69: Grade D 
+   below 60: Grade F. 
+*/
 
-#include <stdio.h>
-
-int main() {
-	int side1,side2,side3;
+#include<stdio.h>
+int main()
+{
+	int per;
+	printf("Enter your percentage %d",per);
+	scanf("%d",&per);
 	
-	printf("Enter value of first side: ");
-	scanf("%d",&side1);
+	if (per>=95 && per<=100)
+	printf("GRADE A");
 	
-	printf("Enter value of second side: ");
-	scanf("%d",&side2);
-	;
-	printf("Enter value of third side: ");
-	scanf("%d",&side3);
+	if (per>=80 && per<=94)
+	printf("GRADE B");
 	
-	if((side1+side2>side3 || side3+side2>side1 || side1+side3>side2) && side1!=0 && side2!=0 && side3!=0)
-		if(side1==side2 || side2==side3 || side1==side3)
-		{
-			printf("As two sides of the triangle are same thus the given sides of the triangle represents an Isosceles triangle");
-		}
-		else if(side1==side2==side3)
-		{
-			printf("As three sides of the triangle are same thus given sides of the triangle represents an Equilateral triangle");
-		}
-		else
-		{
-			printf("As all the three sides of the triangle are different thus the triangle represents an Scalene triangle");
-		}
-	else
-	{
-		printf("Enter correct value of sides so that it forms a traingle");
-	}
+	if (per>=70 && per<=79)
+	printf("GRADE C");
+	
+	if (per>=51 && per<=69)
+	printf("GRADE D");
+	
+	if (per<=50)
+	printf("GRADE F");
 	
 	return 0;
+	
 }

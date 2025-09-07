@@ -1,41 +1,34 @@
-// Q18: Write a program to assign grades based on a percentage input.
+// Q17: Write a program to find the roots of a quadratic equation and categorize them.
 
-#include <stdio.h>
-
-int main() {
-	float marks;
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int a,b,c;
+	printf("Enter value for x square %d",a);
+	scanf("%d",&a);
 	
-	printf("Enter Marks obtained by student: ");
-	scanf("%f",&marks);
+	printf("Enter value for x %d",b);
+	scanf("%d",&b);
 	
-	if(marks>0 && marks<=50)
-	{
-		printf("Grade F");
-	}
-	else if(marks>50 && marks<=60)
-	{
-		printf("Grade E");
-	}
-	else if(marks>60 && marks<=70)
-	{
-		printf("Grade D");
-	}
-	else if(marks>70 && marks<=80)
-	{
-		printf("Grade C");
-	}
-	else if(marks>80 && marks<=90)
-	{
-		printf("Grade B");
-	}
-	else if(marks>90 && marks<=100)
-	{
-		printf("Grade A");
-	}
-	else
-	{
-		printf("Enter correct marks");
-	}
+	printf("Enter value for c %d",c);
+	scanf("%d",&c);
+	
+	int d;
+	d = (b*b-4*a*c);
+	
+	int root1,root2;
+	root1 = (-b+sqrt(d))/2*a;
+	root2 = (-b-sqrt(d))/2*a;
+	
+	if (d>0)
+	printf("Roots are real and different %d,%d",root1,root2);
+	
+	else if (d<0)
+	printf("Roots are imaginery and complex");
+	
+	else if (d==0)
+	printf("Roots are Real and Same %d",root1);
+	
 	return 0;
-	
 }

@@ -12,6 +12,7 @@
 
 // */
 
+
 #include <stdio.h>
 int main(){
     FILE *file=fopen("info.txt","r");
